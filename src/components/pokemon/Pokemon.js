@@ -7,7 +7,7 @@ import imgClose from '../../images/close.svg';
 
 class Pokemon extends Component {
 
-    constructor(props) {
+    constructor(props: object) {
         super(props);
 
         this.state= {
@@ -35,7 +35,7 @@ class Pokemon extends Component {
         });
     }
 
-    render() {
+    render(): React.Node  {
         const {isOpened } = this.state;
         const { name, id } = this.props;
 

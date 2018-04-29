@@ -7,7 +7,7 @@ import Pokemon from "./Pokemon";
 class PokemonList extends Component {
 
 
-    constructor(props) {
+    constructor(props: object) {
         super(props);
 
         this.state = {
@@ -17,6 +17,31 @@ class PokemonList extends Component {
 
         this.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
         this.limit = 9;
+        console.log(this.state);
+
+    }
+
+    parsePokemonId(pokemon: Array): number {
+        const re = /\/pokemon\/(\d+)/;
+        const match =  pokemon.url.match(re);
+        return match ? match[1] : null;
+    }
+
+    createPokemon(pokemon: Array): object {
+        return {'id': this.parsePokemonId(pokemon), 'name' : pokemon.name}
+    }
+
+    addPokemons(pokemons: Array) {
+        let newPokemons = [];
+        pokemons.forEach((pokemon) => (
+           newPokemons.push(this.createPokemon(pokemon))
+        ));
+
+        this.setState({
+            isLoaded: true,
+            pokemons: newPokemons
+
+        });
     }
 
     componentDidMount() {
@@ -24,10 +49,7 @@ class PokemonList extends Component {
             .then(res => res.json())
             .then(
                 (result) => {
-                    this.setState({
-                        isLoaded: true,
-                        pokemons: result.results
-                    });
+                    this.addPokemons(result.results)
                 },
                 (error) => {
                     this.setState({
@@ -38,14 +60,7 @@ class PokemonList extends Component {
             )
     }
 
-    getPokemonId(pokemon: Array): number {
-        const re = /\/pokemon\/(\d+)/;
-        const match =  pokemon.url.match(re);
-        return match ? match[1] : null;
-    }
-
-
-    render() {
+    render(): React.Node {
         const { error, isLoaded, pokemons } = this.state;
 
         if (error) {
@@ -55,7 +70,7 @@ class PokemonList extends Component {
                 <div className={'pokemon-list__list'}>
                     {pokemons.map( (pokemon) => (
                         <div className={'pokemon-list__item'} key={pokemon.uniqueId}>
-                            <Pokemon id={this.getPokemonId(pokemon)} name={pokemon.name} />
+                            <Pokemon id={pokemon.id} name={pokemon.name} />
                         </div>
                     ))}
                 </div>
