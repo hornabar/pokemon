@@ -1,0 +1,17 @@
+@import "../app/base";
+
+.header {
+
+  &__container {
+    @extend .container;
+    padding: 2rem 4rem;
+    background-color: $c2;
+
+  }
+
+  &__logo {
+    @extend ._18;
+    color: $c3;
+    font-weight: $fw-bold;
+  }
+}
