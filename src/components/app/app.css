@@ -50,11 +50,11 @@ table {
   font-size: 62.5%;
   line-height: 93.75%; }
 
-._36 {
+._36, h1 {
   font-size: 3.6rem;
   line-height: 5.4rem; }
 
-._36 {
+._36, h1 {
   font-size: 3.6rem;
   line-height: 3.96rem; }
 
@@ -62,11 +62,11 @@ table {
   font-size: 3.2rem;
   line-height: 4.8rem; }
 
-._30 {
+._30, h2 {
   font-size: 3rem;
   line-height: 4.5rem; }
 
-._30 {
+._30, h2 {
   font-size: 3rem;
   line-height: 3.3rem; }
 
@@ -78,11 +78,11 @@ table {
   font-size: 2.8rem;
   line-height: 3.08rem; }
 
-._24 {
+._24, h3 {
   font-size: 2.4rem;
   line-height: 3.6rem; }
 
-._24 {
+._24, h3 {
   font-size: 2.4rem;
   line-height: 2.64rem; }
 
@@ -98,13 +98,6 @@ table {
   font-size: 1.4rem;
   line-height: 2.1rem; }
 
-.container {
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  width: 100%;
-  max-width: calc(120rem + 4rem); }
-
 a {
   color: currentColor;
   text-decoration: none; }
@@ -112,6 +105,23 @@ a {
 img {
   display: block;
   max-width: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  letter-spacing: 0;
+  font-weight: 700; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+  max-width: calc(120rem + 4rem) .container --s;
+    max-width-max-width: calc(60rem + 4rem); }
 
 * {
   box-sizing: border-box;

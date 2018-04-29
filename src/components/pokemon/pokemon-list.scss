@@ -1,0 +1,20 @@
+@import "../app/base";
+
+.pokemon-list {
+
+  &__list {
+    max-width: $container-width-s;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1 0 30%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    color: $c3;
+    border-radius: 2px;
+  }
+}

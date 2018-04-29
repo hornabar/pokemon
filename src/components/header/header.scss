@@ -1,11 +1,11 @@
 @import "../app/base";
 
 .header {
+  background-color: $c2;
 
   &__container {
     @extend .container;
     padding: 2rem 4rem;
-    background-color: $c2;
 
   }
 

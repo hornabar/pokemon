@@ -1,19 +1,52 @@
 @import 'variables';
 
-.container {
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    width: 100%;
-    max-width: calc(#{$container-width} + 4rem)
-}
-
 a {
-    color: currentColor;
-    text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  letter-spacing: 0;
+  font-weight: $fw-bold;
+}
+
+h1 {
+  @extend ._36;
+}
+
+h2 {
+  @extend ._30;
+}
+
+h3 {
+  @extend ._24;
+}
+
+
+////////////
+// General components
+///////////
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+  max-width: calc(#{$container-width} + 4rem)
+
+  &--s {
+    max-width: calc(#{$container-width-s} + 4rem)
+  }
+}
+
+

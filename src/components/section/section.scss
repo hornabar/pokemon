@@ -1,0 +1,13 @@
+@import "../app/base";
+
+.section {
+  @extend .container;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  &__heading {
+    margin-bottom: 4rem;
+    text-align: center;
+    color: $c2;
+  }
+}

@@ -39,7 +39,7 @@
   font-size: 2.4rem;
   line-height: 2.64rem; }
 
-._18, .header__logo {
+._18 {
   font-size: 1.8rem;
   line-height: 2.7rem; }
 
@@ -68,7 +68,7 @@ h5 {
   letter-spacing: 0;
   font-weight: 700; }
 
-.container, .header__container {
+.container {
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
@@ -76,10 +76,16 @@ h5 {
   max-width: calc(120rem + 4rem) .container --s;
     max-width-max-width: calc(60rem + 4rem); }
 
-.header {
-  background-color: #4a4a4a; }
-  .header__container {
-    padding: 2rem 4rem; }
-  .header__logo {
-    color: #f7e545;
-    font-weight: 700; }
+.pokemon-list__list {
+  max-width: 60rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.pokemon-list__item {
+  flex: 1 0 30%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: #f7e545;
+  border-radius: 2px; }
