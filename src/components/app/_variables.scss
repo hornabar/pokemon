@@ -1,0 +1,39 @@
+
+// ### Colors ###
+$c1: #000;
+$c2: #4a4a4a;
+$c3: #f7e545;
+
+// ### Fonts ###
+$primary-font: Verdana, sans-serif;
+
+$line-height-default-coeficient: 1.5;
+$line-height-medium-coeficient: 1.3;
+$line-height-small-coeficient: 1.1;
+$font-sizes: (
+    base: 62.5%,
+    _36: 3.6rem,
+    _32: 3.2rem,
+    _30: 3rem,
+    _28: 2.8rem,
+    _24: 2.4rem,
+    _18: 1.8rem,
+    _16: 1.6rem,
+    _14: 1.4rem
+);
+
+$fw-default: 400;
+$fw-bold: 700;
+
+
+// ### Breakpoints ###
+$sm: 35.5;
+$md: 46.875;
+$lg: 64;
+
+$container-width: 120rem;
+
+
+// ### Transitions ###
+$trans-default-length: .2s;
+

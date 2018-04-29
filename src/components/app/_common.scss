@@ -1,0 +1,19 @@
+@import 'variables';
+
+.container {
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    width: 100%;
+    max-width: calc(#{$container-width} + 4rem)
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

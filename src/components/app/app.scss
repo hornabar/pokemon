@@ -1,0 +1,26 @@
+@import 'restart';
+@import 'base';
+
+
+* {
+  box-sizing: border-box;
+  white-space: normal;
+}
+
+html {
+  height: 100%;
+  @extend .base;
+}
+
+body {
+  font-family: $primary-font;
+  font-weight: $fw-default;
+  @extend ._16;
+  color: $c1;
+}
+
+body, #root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
