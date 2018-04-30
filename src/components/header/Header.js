@@ -1,9 +1,7 @@
-// @flow
-
 import React from 'react';
 import './header.css';
 
-const Header = (props: object): React.Node => (
+const Header = (props) => (
 	<header className="header">
 		<div className="header__container">
 			<div className="header__logo">

@@ -1,9 +1,7 @@
-// @flow
-
 import React from 'react';
 import './section.css'
 
-const Section = ({ children}): React.Node => (
+const Section = ({children}) => (
     <section className={'section'}>
         {children}
     </section>

@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react';
 import './pokemon.css';
 import PokemonDetail from "./PokemonDetail";
@@ -7,7 +5,7 @@ import PokemonDetail from "./PokemonDetail";
 
 class PokemonItem extends Component {
 
-    constructor(props: object) {
+    constructor(props) {
         super(props);
 
         this.state= {
@@ -18,21 +16,21 @@ class PokemonItem extends Component {
         this.closeDetail = this.closeDetail.bind(this);
     }
 
-    openDetail(e: Event) {
+    openDetail(e) {
         e.stopPropagation();
         this.setState({
             isOpened: true
         });
     }
 
-    closeDetail(e: Event) {
+    closeDetail(e) {
         e.stopPropagation();
         this.setState({
             isOpened: false
         });
     }
 
-    render(): React.Node  {
+    render() {
         const {isOpened } = this.state;
         const { pokemon } = this.props;
 

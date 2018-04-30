@@ -1,10 +1,8 @@
-// @flow
-
 import React from 'react';
 
-const SectionHeading = (props: object): React.Node => (
+const SectionHeading = ({text}) => (
     <h1 className="section__heading">
-        {props.text}
+        {text}
     </h1>
 );
 

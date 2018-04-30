@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react';
 import './pokemon-list.css';
 import PokemonItem from "./PokemonItem";
@@ -7,7 +5,7 @@ import PokemonItem from "./PokemonItem";
 class PokemonList extends Component {
 
 
-    constructor(props: object) {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -19,17 +17,17 @@ class PokemonList extends Component {
         this.limit = 9;
     }
 
-    parsePokemonId(pokemon: Array): number {
+    parsePokemonId(pokemon) {
         const re = /\/pokemon\/(\d+)/;
         const match =  pokemon.url.match(re);
         return match ? match[1] : null;
     }
 
-    createPokemon(pokemon: Array): object {
+    createPokemon(pokemon) {
         return {'id': this.parsePokemonId(pokemon), 'name' : pokemon.name}
     }
 
-    addPokemons(pokemons: Array) {
+    addPokemons(pokemons) {
         let newPokemons = [];
         pokemons.forEach((pokemon) => (
            newPokemons.push(this.createPokemon(pokemon))
@@ -58,7 +56,7 @@ class PokemonList extends Component {
             )
     }
 
-    render(): React.Node {
+    render() {
         const { error, isLoaded, pokemons } = this.state;
 
         if (error) {
