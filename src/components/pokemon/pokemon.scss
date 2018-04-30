@@ -1,6 +1,5 @@
 @import "../app/base";
 
-
 .pokemon{
 
   &__link {
@@ -30,8 +29,6 @@
     overflow-y: scroll;
     transition: opacity .2s linear;
     opacity: 1;
-    animation-name: fadeIn;
-    animation-duration: .2s;
     padding: 2rem;
     display: flex;
     flex-direction: column;

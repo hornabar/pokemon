@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import './pokemon-list.css';
-import Pokemon from "./Pokemon";
+import PokemonItem from "./PokemonItem";
 
 class PokemonList extends Component {
 
@@ -68,7 +68,7 @@ class PokemonList extends Component {
                 <div className={'pokemon-list__list'}>
                     {pokemons.map( (pokemon) => (
                         <div className={'pokemon-list__item'} key={pokemon.id}>
-                            <Pokemon id={pokemon.id} name={pokemon.name} />
+                            <PokemonItem pokemon={pokemon} />
                         </div>
                     ))}
                 </div>
