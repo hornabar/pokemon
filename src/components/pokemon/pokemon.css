@@ -76,6 +76,20 @@ h5 {
   max-width: calc(120rem + 4rem) .container --s;
     max-width-max-width: calc(60rem + 4rem); }
 
+.animation--opacity-enter {
+  opacity: 0.01; }
+
+.animation--opacity-enter-active {
+  opacity: 1;
+  transition: all 300ms; }
+
+.animation--opacity-exit {
+  opacity: 1; }
+
+.animation--opacity-exit-active {
+  opacity: 0.01;
+  transition: all 300ms; }
+
 .pokemon__link {
   width: 100%;
   padding: 1rem;
@@ -89,20 +103,19 @@ h5 {
     opacity: 0.8; }
 
 .pokemon__detail {
+  opacity: 1;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
-  transition: opacity .2s linear;
-  opacity: 1;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: left; }
   .pokemon__detail__content {
     position: relative;

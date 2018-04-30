@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {CSSTransition} from 'react-transition-group';
 import './pokemon.css';
 import PokemonDetail from "./PokemonDetail";
 
@@ -31,7 +32,7 @@ class PokemonItem extends Component {
     closeDetail(e) {
         e.stopPropagation();
         this.setState({
-            isOpened: false
+            isOpened: false,
         });
     }
 
@@ -44,9 +45,14 @@ class PokemonItem extends Component {
                 <div className={'pokemon__link'} onClick={this.openDetail}>
                     {pokemon.name}
                 </div>
-                {isOpened &&
-                    <PokemonDetail {...pokemon} onClose={this.closeDetail} key={pokemon.name}/>
-                }
+                    <CSSTransition
+                        in={isOpened}
+                        timeout={300}
+                        classNames="animation--opacity"
+                        unmountOnExit
+                    >
+                        <PokemonDetail {...pokemon} onClose={this.closeDetail} key={pokemon.name} />
+                    </CSSTransition>
             </div>
         )
     }
