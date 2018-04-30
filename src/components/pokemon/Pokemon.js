@@ -21,7 +21,6 @@ class Pokemon extends Component {
 
     openDetail(e: Event) {
         e.stopPropagation();
-        console.log(e.target);
         this.setState({
             isOpened: true
         });
@@ -29,7 +28,6 @@ class Pokemon extends Component {
 
     closeDetail(e: Event) {
         e.stopPropagation();
-        console.log(e.target);
         this.setState({
             isOpened: false
         });
@@ -38,21 +36,27 @@ class Pokemon extends Component {
     render(): React.Node  {
         const {isOpened } = this.state;
         const { name, id } = this.props;
+        // const detail =
 
         return (
             <div className={'pokemon'}>
                 <div className={'pokemon__link'} onClick={this.openDetail}>
                     {name}
                 </div>
-                <div className={isOpened ? 'pokemon__detail pokemon__detail--opened' : 'pokemon__detail'}>
-                    <div className={'pokemon__detail__content'}>
-                        <img className={'pokemon__detail__close'} src={imgClose} alt={'Close'} onClick={this.closeDetail}/>
-                        <img className={'pokemon__detail__img'} src={`${this.imageUrl}${id}.png`} alt={name}/>
-                        <div className={'pokemon__detail__name'}>
-                            {name}
+
+                {isOpened &&
+                    <div className={'pokemon__detail'}>
+                        <div className={'pokemon__detail__content'}>
+                            <img className={'pokemon__detail__close'} src={imgClose} alt={'Close'}
+                                 onClick={this.closeDetail}/>
+                            <img className={'pokemon__detail__img'} src={`${this.imageUrl}${id}.png`} alt={name}/>
+                            <div className={'pokemon__detail__name'}>
+                                {name}
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
+
             </div>
         )
     }

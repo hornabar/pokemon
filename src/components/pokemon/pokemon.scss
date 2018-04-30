@@ -1,5 +1,6 @@
 @import "../app/base";
 
+
 .pokemon{
 
   &__link {
@@ -19,7 +20,7 @@
   }
 
   &__detail {
-
+    $detail: &;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -28,9 +29,9 @@
     background-color: rgba($c1, .5 );
     overflow-y: scroll;
     transition: opacity .2s linear;
-    opacity: 0;
-    pointer-events: none;
-
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: .2s;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -38,11 +39,6 @@
     justify-content: center;
     text-align: left;
 
-    &--opened {
-      z-index: 2;
-      opacity: 1;
-      pointer-events: all;
-    }
 
     &__content {
       position: relative;

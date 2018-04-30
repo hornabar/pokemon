@@ -17,8 +17,6 @@ class PokemonList extends Component {
 
         this.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
         this.limit = 9;
-        console.log(this.state);
-
     }
 
     parsePokemonId(pokemon: Array): number {
@@ -69,7 +67,7 @@ class PokemonList extends Component {
             return (
                 <div className={'pokemon-list__list'}>
                     {pokemons.map( (pokemon) => (
-                        <div className={'pokemon-list__item'} key={pokemon.uniqueId}>
+                        <div className={'pokemon-list__item'} key={pokemon.id}>
                             <Pokemon id={pokemon.id} name={pokemon.name} />
                         </div>
                     ))}
