@@ -17,4 +17,10 @@
     color: $c3;
     border-radius: 2px;
   }
+
+  &__empty {
+    color: $c2;
+    @extend ._18;
+    text-align: center;
+  }
 }

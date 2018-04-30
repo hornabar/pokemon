@@ -12,6 +12,11 @@ class PokemonItem extends Component {
             isOpened: false
         };
 
+        this.animationProps = {
+            startAnimation: true,
+            startStyle: { opacity: 0 },
+            endStyle: { opacity: 1 },
+        };
         this.openDetail = this.openDetail.bind(this);
         this.closeDetail = this.closeDetail.bind(this);
     }
@@ -39,9 +44,8 @@ class PokemonItem extends Component {
                 <div className={'pokemon__link'} onClick={this.openDetail}>
                     {pokemon.name}
                 </div>
-
                 {isOpened &&
-                    <PokemonDetail {...pokemon} onClose={this.closeDetail}/>
+                    <PokemonDetail {...pokemon} onClose={this.closeDetail} key={pokemon.name}/>
                 }
             </div>
         )
