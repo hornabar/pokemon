@@ -45,7 +45,7 @@ class PokemonItem extends Component {
                     classNames="transition--opacity"
                     unmountOnExit
                 >
-                    <PokemonDetail {...pokemon} onClose={this.closeDetail} key={pokemon.name} />
+                    <PokemonDetail pokemon={pokemon} onClose={this.closeDetail} key={pokemon.name} />
                 </CSSTransition>
             </div>
         )

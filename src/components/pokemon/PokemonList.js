@@ -10,9 +10,10 @@ class PokemonList extends Component {
         this.state = {
             isLoaded: false,
             pokemons: [],
+            error: null,
         };
 
-        this.apiUrl = "https://pokeapi.co/api/v2/pokemon/";
+        this.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
         this.limit = 9;
     }
 
@@ -44,7 +45,10 @@ class PokemonList extends Component {
             .then(res => res.json())
             .then(
                 (result) => {
-                    this.addPokemons(result.results)
+                    this.setState({
+                        isLoaded: true,
+                        pokemons: result.results,
+                    });
                 },
                 (error) => {
                     this.setState({
@@ -64,7 +68,7 @@ class PokemonList extends Component {
             return (
                 <div className={'pokemon-list__list'}>
                     {pokemons.map( (pokemon) => (
-                        <div className={'pokemon-list__item'} key={pokemon.id}>
+                        <div className={'pokemon-list__item'} key={pokemon.name}>
                             <PokemonItem pokemon={pokemon} />
                         </div>
                     ))}
