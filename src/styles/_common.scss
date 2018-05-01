@@ -49,29 +49,7 @@ h3 {
   }
 }
 
-////////////
-// Animations
-///////////
 
-.transition {
-
-  &--opacity {
-    &-enter {
-      opacity: 0.01;
-    }
-    &-enter-active {
-      opacity: 1;
-      transition: all 300ms;
-    }
-    &-exit {
-      opacity: 1;
-    }
-    &-exit-active {
-      opacity: 0.01;
-      transition: all 300ms;
-    }
-  }
-}
 
 
 
