@@ -42,10 +42,10 @@ h3 {
   padding: 0 2rem;
   position: relative;
   width: 100%;
-  max-width: calc(#{$container-width} + 4rem)
+  max-width: calc(#{$container-width} + 4rem);
 
   &--s {
-    max-width: calc(#{$container-width-s} + 4rem)
+    max-width: calc(#{$container-width-s} + 4rem);
   }
 }
 
@@ -53,7 +53,7 @@ h3 {
 // Animations
 ///////////
 
-.animation {
+.transition {
 
   &--opacity {
     &-enter {

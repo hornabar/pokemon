@@ -120,20 +120,21 @@ h5 {
   padding: 0 2rem;
   position: relative;
   width: 100%;
-  max-width: calc(120rem + 4rem) .container --s;
-    max-width-max-width: calc(60rem + 4rem); }
+  max-width: calc(120rem + 4rem); }
+  .container--s {
+    max-width: calc(60rem + 4rem); }
 
-.animation--opacity-enter {
+.transition--opacity-enter {
   opacity: 0.01; }
 
-.animation--opacity-enter-active {
+.transition--opacity-enter-active {
   opacity: 1;
   transition: all 300ms; }
 
-.animation--opacity-exit {
+.transition--opacity-exit {
   opacity: 1; }
 
-.animation--opacity-exit-active {
+.transition--opacity-exit-active {
   opacity: 0.01;
   transition: all 300ms; }
 

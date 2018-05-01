@@ -73,20 +73,21 @@ h5 {
   padding: 0 2rem;
   position: relative;
   width: 100%;
-  max-width: calc(120rem + 4rem) .container --s;
-    max-width-max-width: calc(60rem + 4rem); }
+  max-width: calc(120rem + 4rem); }
+  .container--s {
+    max-width: calc(60rem + 4rem); }
 
-.animation--opacity-enter {
+.transition--opacity-enter {
   opacity: 0.01; }
 
-.animation--opacity-enter-active {
+.transition--opacity-enter-active {
   opacity: 1;
   transition: all 300ms; }
 
-.animation--opacity-exit {
+.transition--opacity-exit {
   opacity: 1; }
 
-.animation--opacity-exit-active {
+.transition--opacity-exit-active {
   opacity: 0.01;
   transition: all 300ms; }
 
@@ -103,7 +104,6 @@ h5 {
     opacity: 0.8; }
 
 .pokemon__detail {
-  opacity: 1;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -139,5 +139,9 @@ h5 {
     font-weight: bold; }
     .pokemon__detail__close:hover {
       opacity: .8; }
+  .pokemon__detail__img {
+    height: 9.6rem;
+    width: auto;
+    margin-bottom: 1rem; }
   .pokemon__detail__name {
     color: #4a4a4a; }
