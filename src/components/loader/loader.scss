@@ -1,0 +1,17 @@
+@import "styles/base";
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  width: 8rem;
+  height: 8rem;
+  border: 1rem solid $c4;
+  border-top: 1rem solid $c2;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  margin: 2rem auto;
+}
+

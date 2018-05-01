@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import Loader from "components/loader/Loader";
+import Error from "components/error/Error";
 import './pokemon.css';
 import imgClose from '../../images/close.svg';
+
 
 class PokemonDetail extends Component {
 
@@ -43,25 +46,25 @@ class PokemonDetail extends Component {
 
         if (error) {
             content = (
-                <div className="pokemon-list__empty">Error: {error.message}</div>
+                <Error text={error.message} />
             )
         } else if (isLoaded){
             content = (
-                <fragment>
+                <div className="pokemon__detail__content">
                     <img className={'pokemon__detail__img'} src={pokemon.img} alt={pokemon.name} />
                     <div className={'pokemon__detail__name'}>
                         {pokemon.name}
                     </div>
-                </fragment>
+                </div>
             )
         } else {
             content = (
-                <div className="pokemon-list__empty">Fetching...</div>
+                <Loader class={'loader--l'} />
             )
         }
         return (
             <div className={'pokemon__detail'}>
-                <div className={'pokemon__detail__content'}>
+                <div className={'pokemon__detail__modal'}>
                     <img className={'pokemon__detail__close'} src={imgClose} alt={'Close'} onClick={onClose} />
                     {content}
                 </div>

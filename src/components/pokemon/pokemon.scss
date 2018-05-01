@@ -1,5 +1,11 @@
 @import "styles/base";
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
 .pokemon{
 
   &__link {
@@ -14,7 +20,7 @@
     @extend ._18;
 
     &:hover {
-      // opacity: 0.8;
+      opacity: 0.8;
     }
   }
 
@@ -34,15 +40,11 @@
     background-color: rgba($c1, .5 );
     text-align: left;
 
-    &__content {
+    &__modal {
       position: relative;
       width: 40rem;
       max-width: 100%;
       padding: 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       background-color: white;
       border-radius: 2px;
     }
@@ -61,6 +63,14 @@
       &:hover {
         opacity: .8;
       }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn .3s linear;
     }
 
     &__img {

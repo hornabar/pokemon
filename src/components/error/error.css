@@ -31,15 +31,15 @@
   font-size: 2.8rem;
   line-height: 3.08rem; }
 
-._24, h3, .pokemon__detail__name {
+._24, h3, .error {
   font-size: 2.4rem;
   line-height: 3.6rem; }
 
-._24, h3, .pokemon__detail__name {
+._24, h3, .error {
   font-size: 2.4rem;
   line-height: 2.64rem; }
 
-._18, .pokemon__link {
+._18 {
   font-size: 1.8rem;
   line-height: 2.7rem; }
 
@@ -91,66 +91,6 @@ h5 {
   opacity: 0.01;
   transition: all 300ms; }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-.pokemon__link {
+.error {
   width: 100%;
-  padding: 1rem;
-  background-color: #f0de19;
-  border-radius: 2px;
-  text-align: center;
-  cursor: pointer;
-  color: #222240;
-  z-index: 1; }
-  .pokemon__link:hover {
-    opacity: 0.8; }
-
-.pokemon__detail {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow-y: scroll;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: left; }
-  .pokemon__detail__modal {
-    position: relative;
-    width: 40rem;
-    max-width: 100%;
-    padding: 4rem;
-    background-color: white;
-    border-radius: 2px; }
-  .pokemon__detail__close {
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    top: 1.5rem;
-    right: 1.5rem;
-    color: #000;
-    cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: bold; }
-    .pokemon__detail__close:hover {
-      opacity: .8; }
-  .pokemon__detail__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn .3s linear; }
-  .pokemon__detail__img {
-    height: 9.6rem;
-    width: auto;
-    margin-bottom: 1rem; }
-  .pokemon__detail__name {
-    color: #222240; }
+  text-align: center; }

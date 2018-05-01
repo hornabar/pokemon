@@ -1,0 +1,8 @@
+@import "styles/base";
+
+.error {
+  width: 100%;
+  text-align: center;
+  @extend ._24;
+}
+

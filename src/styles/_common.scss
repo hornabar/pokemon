@@ -33,21 +33,7 @@ h3 {
 }
 
 
-////////////
-// General components
-///////////
 
-.container {
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  width: 100%;
-  max-width: calc(#{$container-width} + 4rem);
-
-  &--s {
-    max-width: calc(#{$container-width-s} + 4rem);
-  }
-}
 
 
 
