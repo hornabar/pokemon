@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
+import PokemonItem from './PokemonItem';
 import './pokemon-list.css';
-import PokemonItem from "./PokemonItem";
 
 class PokemonList extends Component {
-
 
     constructor(props) {
         super(props);
 
         this.state = {
             isLoaded: false,
-            pokemons: []
+            pokemons: [],
         };
 
-        this.apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+        this.apiUrl = "https://pokeapi.co/api/v2/pokemon/";
         this.limit = 9;
     }
 
     parsePokemonId(pokemon) {
         const re = /\/pokemon\/(\d+)/;
-        const match =  pokemon.url.match(re);
-        return match ? match[1] : null;
+        const [_, pokemonId] = pokemon.url.match(re);
+        return pokemonId    ;
     }
 
     createPokemon(pokemon) {
-        return {'id': this.parsePokemonId(pokemon), 'name' : pokemon.name}
+        return {"id": this.parsePokemonId(pokemon), "name" : pokemon.name}
     }
 
     addPokemons(pokemons) {
@@ -35,7 +34,7 @@ class PokemonList extends Component {
 
         this.setState({
             isLoaded: true,
-            pokemons: newPokemons
+            pokemons: newPokemons,
 
         });
     }
@@ -50,14 +49,14 @@ class PokemonList extends Component {
                 (error) => {
                     this.setState({
                         isLoaded: true,
-                        error
+                        error,
                     });
                 }
             )
     }
 
     render() {
-        const { error, isLoaded, pokemons } = this.state;
+        const {error, isLoaded, pokemons} = this.state;
 
         if (error) {
             return <div className="pokemon-list__empty">Error: {error.message}</div>

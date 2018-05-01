@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import PokemonDetail from './PokemonDetail';
 import './pokemon.css';
-import PokemonDetail from "./PokemonDetail";
 
 
 class PokemonItem extends Component {
@@ -9,8 +9,8 @@ class PokemonItem extends Component {
     constructor(props) {
         super(props);
 
-        this.state= {
-            isOpened: false
+        this.state = {
+            isOpened: false,
         };
 
         this.openDetail = this.openDetail.bind(this);
@@ -19,7 +19,7 @@ class PokemonItem extends Component {
 
     openDetail(e) {
         this.setState({
-            isOpened: true
+            isOpened: true,
         });
     }
 
@@ -31,22 +31,22 @@ class PokemonItem extends Component {
     }
 
     render() {
-        const {isOpened } = this.state;
-        const { pokemon } = this.props;
+        const {isOpened} = this.state;
+        const {pokemon} = this.props;
 
         return (
             <div className={'pokemon'}>
                 <div className={'pokemon__link'} onClick={this.openDetail}>
                     {pokemon.name}
                 </div>
-                    <CSSTransition
-                        in={isOpened}
-                        timeout={300}
-                        classNames="transition--opacity"
-                        unmountOnExit
-                    >
-                        <PokemonDetail {...pokemon} onClose={this.closeDetail} key={pokemon.name} />
-                    </CSSTransition>
+                <CSSTransition
+                    in={isOpened}
+                    timeout={300}
+                    classNames="transition--opacity"
+                    unmountOnExit
+                >
+                    <PokemonDetail {...pokemon} onClose={this.closeDetail} key={pokemon.name} />
+                </CSSTransition>
             </div>
         )
     }

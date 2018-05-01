@@ -103,11 +103,11 @@ h5 {
   padding: 1rem;
   margin-bottom: 1rem;
   min-width: 20rem;
-  color: #f7e545;
+  color: #f0de19;
   border-radius: 2px; }
 
 .pokemon-list__empty {
-  color: #4a4a4a;
+  color: #222240;
   text-align: center; }
 
 @media (min-width: 40em) {

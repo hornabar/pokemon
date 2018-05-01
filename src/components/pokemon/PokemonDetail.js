@@ -2,7 +2,7 @@ import React from 'react';
 import './pokemon.css';
 import imgClose from '../../images/close.svg';
 
-const PokemonDetail = ({id, name, onClose,  }) => {
+const PokemonDetail = ({id, name, onClose}) => {
 
     const imageUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 

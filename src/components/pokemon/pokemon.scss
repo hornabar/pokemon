@@ -1,20 +1,20 @@
-@import "../../styles/base";
+@import "styles/base";
 
 .pokemon{
 
   &__link {
     width: 100%;
     padding: 1rem;
-    background-color: $c2;
+    background-color: $c3;
     border-radius: 2px;
     text-align: center;
     cursor: pointer;
-    color: $c3;
+    color: $c2;
     z-index: 1;
     @extend ._18;
 
     &:hover {
-      opacity: 0.8;
+      // opacity: 0.8;
     }
   }
 
@@ -38,12 +38,13 @@
       position: relative;
       width: 40rem;
       max-width: 100%;
-      background-color: white;
       padding: 4rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: white;
+      border-radius: 2px;
     }
 
     &__close {

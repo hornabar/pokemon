@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../header/Header';
+import Header from 'components/header/Header';
 import './app.css';
-import PokemonList from "../pokemon/PokemonList";
-import Section from "../section/Section";
-import SectionHeading from "../section/SectionHeading";
+import PokemonList from 'components/pokemon/PokemonList';
+import Section from 'components/section/Section';
+import SectionHeading from 'components/section/SectionHeading';
 
 const App = (props) => (
   <div>
