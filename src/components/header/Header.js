@@ -7,7 +7,7 @@ const Header = (props) => (
         <div className='header__container'>
             <img className='header__logo' src={imgLogo} alt={'Pokemon App'} />
         </div>
-	</header>
+    </header>
 );
 
 export default Header;

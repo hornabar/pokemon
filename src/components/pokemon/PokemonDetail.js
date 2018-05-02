@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Loader from "components/loader/Loader";
-import Error from "components/error/Error";
+import Loader from 'components/loader/Loader';
+import Error from 'components/error/Error';
 import './pokemon.css';
-import imgClose from '../../images/close.svg';
+import imgClose from 'images/close.svg';
 
 
 class PokemonDetail extends Component {

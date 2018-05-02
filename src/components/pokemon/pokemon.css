@@ -129,7 +129,11 @@ h5 {
     max-width: 100%;
     padding: 4rem;
     background-color: white;
-    border-radius: 2px; }
+    border-radius: 2px;
+    min-height: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .pokemon__detail__close {
     position: absolute;
     width: 1.5rem;
